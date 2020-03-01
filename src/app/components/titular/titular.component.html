@@ -1,0 +1,27 @@
+<form action="" class="mt-2" #form="ngForm" (ngSubmit)="validacion()">
+<h3>Titular - 1. Validación de afiliados Titulares por JSON.</h3>
+    <div class="form-row">
+      <div class="form-group col-sm-3">
+        <label >tipo_documento</label>
+        <input type="text" class="form-control" [(ngModel)]="dato.data[0].tipo_documento" name="tipo_documento">
+      </div>
+      <div class="form-group col-sm-3">
+        <label >numero_documento</label>
+        <input type="text" class="form-control" [(ngModel)]="dato.data[0].numero_documento" name="numero_documento">
+      </div>
+      <div class="form-group col-sm-3">
+        <label >fecha_nacimiento</label>
+        <input type="text" class="form-control" [(ngModel)]="dato.data[0].fecha_nacimiento" name="fecha_nacimiento">
+      </div>
+      <div class="form-group col-sm-3">
+        <label >tipo_asegurado</label>
+        <select class="form-control" [(ngModel)]="dato.data[0].tipo_asegurado" name="tipo_asegurado">
+          <option *ngFor="let item of tiposasegurados">{{item}}</option>
+        </select>
+      </div>
+      <button class="btn btn-block btn-success" > <i class="fa fa-save"></i> Verificar</button>
+    </div>
+</form>
+<h4>Datos personales</h4>
+<pre>{{datos | json}}</pre>
+

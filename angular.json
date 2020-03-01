@@ -1,6 +1,6 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
-  "version": 1, 
+  "version": 1,
   "newProjectRoot": "projects",
   "projects": {
     "asegurado3": {
@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "asegurado3"
+    }
+  },
+  "defaultProject": "asegurado3",
+  "cli": {
+    "analytics": "84d97065-ebed-4615-8057-f54533d62cb5"
+  }
 }
